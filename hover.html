@@ -1,0 +1,22 @@
+<img src="01.jpg" width="1000" alt="Projects" usemap="#projectmap" id='img'>
+
+<map name="projectmap">
+  <area shape="rect" coords="600,0,1000,500" onmouseover="myFunction()" onmouseout="myFunction2()"alt="Sun">
+  <area shape="rect" coords="0,0,500,400" onmouseover="myFunction3()" onmouseout="myFunction2()"alt="Sun">
+  <area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury">
+  <area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus">
+</map>
+
+<script>
+function myFunction(e){
+    document.getElementById("img").src = "03.jpg";
+}
+
+function myFunction2(e){
+    document.getElementById("img").src = "01.jpg";
+}
+
+function myFunction3(e){
+    document.getElementById("img").src = "02.jpg";
+}
+</script>
