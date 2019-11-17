@@ -148,33 +148,33 @@ const projectColumns=2,projectsLength=projects.length;
 function showSectionImg(event){
     document.getElementById("img").src = "banner/"+event.target.getAttribute('data-section-img');
 }
-function backnormal(e){
+function backnormal(event){
     document.getElementById("img").src = "banner/00banner.jpg";
 }
 function showOverlay(event){
+    console.log(event.currentTarget);
+    console.log('showO');
     $('.overlay').removeClass('hide');
 }
 function hideOverlay(event){
+    console.log(event.currentTarget);
+    console.log('hideO');
     $('.overlay').addClass('hide');
 }
 function projectMouseOver(event){
     event.currentTarget.children[0].src = "Icons/"+event.currentTarget.getAttribute('data-img-hover');
 }
 function projectMouseOut(event){
-
     var e = event.toElement || event.relatedTarget;
     if (e.parentNode == this || e == this) {
        return;
     }
-
     event.currentTarget.children[0].src = "Icons/"+event.currentTarget.getAttribute('data-img');
-
 }
 
 $(document).ready(function () {
 
     let $projectsEl = $('#projects');
-    // let gridEl="<div>";
     let gridEl=`<div class="row">`;
     
     projects.map(function(project,i){
@@ -190,8 +190,6 @@ $(document).ready(function () {
     })
     gridEl+="</div>";
     $(gridEl).appendTo($projectsEl);
-    //.getElementsByClassName('project').map(project=>project.addEventListener('mouseout',projectMouseOut,true));
-    //document.getElementsByClassName('project').map(project=>project.addEventListener('mouseover',projectMouseOver,true));
     $('.project').hover(projectMouseOver,projectMouseOut);
     $('.project').click(function(event){
         const page = event.currentTarget.getAttribute('data-page');
