@@ -2,148 +2,41 @@
 <html>
 <head>
 <title>Aisha Anam</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-  body{
-    padding: 0;
-    margin: 0;
-    font-family: Tahoma, Arial, Helvetica, sans-serif;
-  }
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  background-color: blanchedalmond;
-  margin: auto;
-  text-align: center;
-  padding: 10px 0;
-}
-
-.title {
-  color: grey;
-  font-size: 18px;
-}
-
-button {
-  border: none;
-  outline: 0;
-  display: inline-block;
-  padding: 5px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 5px;
-  margin-left: 5px;
-}
-
-.card a {
-  text-decoration: none;
-  font-size: 22px;
-  color: black;
-  padding: 5px;
-}
-
-button:hover, a:hover {
-  opacity: 0.7;
-}
-
-.gallery-parent{
-  text-align: center;
-}
-
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  display: inline-block;
-  width: 30%;
-}
-
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-</style>
+<link rel="stylesheet" href="index.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="index.js"></script>
 </head>
 <body>
-<div class="card">
-    <img src="aisha.jpg" alt="Aisha's Picture" style="width:200px;border-radius: 100%;">
-    <h1>Aisha Anam</h1>
-    <p class="title">Architect + Designer</p>
-    <p><i class="fa fa-map-marker" style="margin-right: 5px;"></i>Mumbai, Maharashtra</p>
-    <a href="https://www.behance.net/aishaanam" target="_blank"><i class="fa fa-behance"></i></a>
-    <a href="#"><i class="fa fa-medium"></i></a>
-    <a href="https://www.linkedin.com/in/aisha-anam-928a18125/" target="_blank"><i class="fa fa-linkedin"></i></a>
-    <a href="#"><i class="fa fa-envelope"></i></a>
-    <a href="#"><i class="fa fa-file-text-o"></i></a>
-    <button>Contact</button>
+  <img src="banner/00banner.jpg" width="1000" alt="Projects" usemap="#projectmap" id='img'>
+  <map name="projectmap">
+    <area shape="rect" coords="630,245,650,268" data-section-img="Board game.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="590,245,630,275" data-section-img="Digital Game.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="565,320,590,340" data-section-img="Dat Viz.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="613,175,638,200" data-section-img="E Vaahan.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="472,95,496,185" data-section-img="APJ.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="405,195,466,232" data-section-img="Culture centre.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="580,280,605,320" data-section-img="Footreak.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="650,190,662,205" data-section-img="HFID.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="713,140,748,160" data-section-img="Instructional Design MV.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="642,162,660,185" data-section-img="Internship Dementia.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="650,108,703,162" data-section-img="Israel.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="345,238,415,292" data-section-img="Langua.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="496,128,525,162" data-section-img="Magic.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="290,250,330,280" data-section-img="Nuclear.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="598,200,625,238" data-section-img="Service Design.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="337,100,410,160" data-section-img="HCP.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="208,175,528,370" data-section-img="Mount Archi.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="528,135,825,420" data-section-img="Mount Design.jpg" onmouseover="showSectionImg(event)" onmouseout="backnormal()">
+    <area shape="rect" coords="475,378,500,435" onmouseover="showOverlay(event)" onmouseout="hideOverlay(event)">
+  </map>
+  <div class="overlay hide">Aisha Anam</div>
+
+  <div id="projects"></div>
+  <div id="down-bkg"><img src="background/Bottom Island Page.jpg"></div>
+  <div class="profile">
+    <div><div class="icon"><a href="https://www.linkedin.com/in/aisha-anam-928a18125/" target="_blank">LinkedIn</a></div></div>
+    <div><div class="icon"><a href="https://www.behance.net/aishaanam" target="_blank">Behance</a></div></div>
+    <div><div class="icon"><a href="mailto:aisha27anam@gmail.com">Email</a></div></div>
   </div>
-
-  <div class="gallery-parent">
-    <div class="gallery">
-      <a target="_blank" href="wind-farm.jpg">
-        <img src="wind-farm.jpg" alt="Cinque Terre" width="600" height="400">
-      </a>
-      <div class="desc">My Project Number 1</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="wind-farm.jpg">
-        <img src="wind-farm.jpg" alt="Forest" width="600" height="400">
-      </a>
-      <div class="desc">My Project Number 2</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="wind-farm.jpg">
-        <img src="wind-farm.jpg" alt="Northern Lights" width="600" height="400">
-      </a>
-      <div class="desc">My Project Number 3</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="wind-farm.jpg">
-        <img src="wind-farm.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">My Project Number 4</div>
-    </div>
-
-    <div class="gallery">
-      <a target="_blank" href="wind-farm.jpg">
-        <img src="wind-farm.jpg" alt="Cinque Terre" width="600" height="400">
-      </a>
-      <div class="desc">My Project Number 5</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="wind-farm.jpg">
-        <img src="wind-farm.jpg" alt="Forest" width="600" height="400">
-      </a>
-      <div class="desc">My Project Number 6</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="wind-farm.jpg">
-        <img src="wind-farm.jpg" alt="Northern Lights" width="600" height="400">
-      </a>
-      <div class="desc">My Project Number 7</div>
-    </div>
-    
-    <div class="gallery">
-      <a target="_blank" href="wind-farm.jpg">
-        <img src="wind-farm.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <div class="desc">My Project Number 8</div>
-    </div>
-  </div>
-
 </body>
 </html>
