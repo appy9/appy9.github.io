@@ -27,7 +27,7 @@ const projects = [
         name: 'DTAd',
         description: 'Dysphagia Therapy Assisting Device <i>Winning project Mechaton\'19 Israel</i>',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -35,7 +35,7 @@ const projects = [
         name: 'Instructional Design',
         description: '<i>Project 2 (mini)</i>',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -51,7 +51,7 @@ const projects = [
         name: 'Museum of Language London',
         description: '<i>Among top 50 in Internation competition</i>',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -59,7 +59,7 @@ const projects = [
         name: 'Service Design',
         description: 'IDC placement service & food service in office',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -67,7 +67,7 @@ const projects = [
         name: 'Footreak',
         description: 'Foot based interactive installation for phoysical fitness',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -75,7 +75,7 @@ const projects = [
         name: 'Beam On',
         description: 'Educational board game for school children',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -83,7 +83,7 @@ const projects = [
         name: 'Interior Design',
         description: 'project as a design consultant',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -99,7 +99,7 @@ const projects = [
         name: 'DataViz.',
         description: 'GeoViz, datastories, conceptual mapping',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -107,7 +107,7 @@ const projects = [
         name: 'Note Box',
         description: 'Currency identification tool for visually impaired people',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -115,7 +115,7 @@ const projects = [
         name: 'Circlization',
         description: 'Cyber-Neuro- Physical Educational game ',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -123,7 +123,7 @@ const projects = [
         name: 'Voluteer',
         description: '',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -131,7 +131,7 @@ const projects = [
         name: 'Landscape Design',
         description: 'redesigning urban park',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     },
@@ -139,7 +139,7 @@ const projects = [
         name: 'Shollarom',
         description: 'Game design for elderly people with dementia <i>Internship & Research</i>',
         main: 'sample.jpg',
-        hover: 'sample-hover.jpg',
+        hover: 'sample.jpg',
         layout: 'img-top',
         page: ''
     }
@@ -152,13 +152,9 @@ function backnormal(event){
     document.getElementById("img").src = "banner/00banner.jpg";
 }
 function showOverlay(event){
-    console.log(event.currentTarget);
-    console.log('showO');
     $('.overlay').removeClass('hide');
 }
 function hideOverlay(event){
-    console.log(event.currentTarget);
-    console.log('hideO');
     $('.overlay').addClass('hide');
 }
 function projectMouseOver(event){
